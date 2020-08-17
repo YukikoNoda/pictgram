@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'comment/add'
   get 'sessions/new'
 
   root 'pages#index'
@@ -15,4 +16,6 @@ Rails.application.routes.draw do
   post '/favorites', to: 'favorites#create'
   delete '/favorites', to: 'favorites#destroy'
   
+  get 'comments',   to: 'comments#add'
+  post '/comments', to: 'comments#create'
 end
