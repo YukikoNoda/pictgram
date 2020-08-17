@@ -137,5 +137,53 @@ h1, h2 {
       height: 30px;
       margin-left: 20px;
     }
+
+    .topic-index-icon-red {
+      // background-color: red($color: #f50909);
+      width: 200px;
+    }
+  }
+}
+.heart {
+  display: inline-block;
+  color: #333;
+  position: relative;
+  margin-top: 10px;
+  margin-left: 7px;
+  width: 14px;
+  height: 14px;
+  border-left: solid 1px currentColor;
+  border-bottom: solid 1px currentColor;
+  transform: rotate(-45deg) scale(1);
+  background: none;
+
+  &.red {
+    background-color: red;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    top: -9px;
+    left: -1px;
+    width: 14px;
+    height: 10px;
+    border-radius: 7px 7px 0 0;
+    border-top: solid 1px currentColor;
+    border-left: solid 1px currentColor;
+    border-right: solid 1px currentColor;
+    background: inherit;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 12px;
+    width: 10px;
+    height: 14px;
+    border-radius: 0 7px 7px 0;
+    border-top: solid 1px currentColor;
+    border-right: solid 1px currentColor;
+    border-bottom: solid 1px currentColor;
+    background: inherit;
   }
 }
