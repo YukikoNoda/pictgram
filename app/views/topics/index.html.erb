@@ -25,11 +25,14 @@
               <%= topic.description %>
             </p>
             <h3>コメント</h3>
-            <% @comments.each do |comment| %>
-              <% if comment[:topic_id] == topic.id %>
-                <p><%= comment.comment %></p>
-              <% end %>
+            <% topic.comments.each do |comment| %>
+              <p><%= comment.comment %></p>
             <% end %>
+            <%# @comments.each do |comment| %>
+              <%# if comment[:topic_id] == topic.id %>
+                <p><%#= comment.comment %></p>
+              <%# end %>
+            <%# end %>
           </div>
         </div>
       </div>
